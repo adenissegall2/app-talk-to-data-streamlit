@@ -57,27 +57,6 @@ st.logo(logo_path, link=link_inovally)
 
 st.title("App Talk to Data 💬🎲")
 
-dark = '''
-<style>
-    .stApp {
-    background-color: black;
-    }
-</style>
-'''
-
-light = '''
-<style>
-    .stApp {
-    background-color: white;
-    }
-</style>
-'''
-
-st.markdown(dark, unsafe_allow_html=True)
-
-# Create a toggle button
-toggle = st.button("Mude a cor do tema")
-
 st.subheader("🦜🔗 Use o poder da IA Generativa para descobrir insights sobre os devedores!")
 imagem_url = 'https://raw.githubusercontent.com/adenissegall/app-talk-to-data-streamlit/main/app-talk-to-data-streamlit/imagens/image.png'
 st.image(imagem_url)
