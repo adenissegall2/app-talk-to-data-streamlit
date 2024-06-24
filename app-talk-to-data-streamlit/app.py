@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 import dotenv
 from dotenv import load_dotenv
+import requests
+from io import StringIO
 
 from pandasai import Agent
 from pandasai.llm.openai import OpenAI
@@ -20,8 +22,18 @@ llm = OpenAI(api_token=openai_api_key)
 
 
 def extract_transform_data():
-    df_pessoas = pd.read_csv("./data/df_pessoas.csv", sep=',')
-    df_devedores = pd.read_csv("./data/df_segmentacao_devedores.csv", sep=',')
+    df_pessoas_url = 'https://raw.githubusercontent.com/adenissegall/app-talk-to-data-streamlit/main/app-talk-to-data-streamlit/data/df_pessoas.csv'
+    df_devedores_url = 'https://raw.githubusercontent.com/adenissegall/app-talk-to-data-streamlit/main/app-talk-to-data-streamlit/data/df_segmentacao_devedores.csv'
+    
+    response1 = requests.get(df_pessoas_url)
+    response2 = requests.get(df_devedores_url)
+
+    df_pessoas = pd.read_csv(StringIO(response1.text), sep=',')
+    df_devedores = pd.read_csv(StringIO(response2.text), sep=',')
+
+    #df_pessoas = pd.read_csv("./data/df_pessoas.csv", sep=',')
+    #df_devedores = pd.read_csv("./data/df_segmentacao_devedores.csv", sep=',')
+    
     df_final = df_devedores.merge(df_pessoas[['Idade', 'cpf', 'Gênero', 'Bairro PF',
                                            'Cidade PF', 'Bairro PF(2)', 'Cidade PF(2)']],
                                              left_on='documento', right_on='cpf', how='left')
