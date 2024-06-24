@@ -49,7 +49,11 @@ df = extract_transform_data()
 st.set_page_config(page_title="App Talk to Data", page_icon=":game_die:", layout="wide")
 logo_path = "./logo_inovally.png"
 link_inovally = "https://inovally.com.br/"
-st.logo("./logo_inovally.png", link=link_inovally)
+
+logo_url = 'https://github.com/adenissegall/app-talk-to-data-streamlit/blob/main/app-talk-to-data-streamlit/logo_inovally.png'
+
+#st.logo("./logo_inovally.png", link=link_inovally)
+st.logo(logo_url, link=link_inovally)
 
 
 st.title("App Talk to Data 💬🎲")
