@@ -50,9 +50,9 @@ st.set_page_config(page_title="App Talk to Data", page_icon=":game_die:", layout
 logo_path = 'https://raw.githubusercontent.com/adenissegall/app-talk-to-data-streamlit/main/app-talk-to-data-streamlit/imagens/logo_inovally.png'
 link_inovally = "https://inovally.com.br/"
 
-logo_url = 'imagens/logo_inovally.png'
+#logo_url = 'imagens/logo_inovally.png'
 #st.logo("./logo_inovally.png", link=link_inovally)
-st.logo(logo_url, link=link_inovally)
+st.logo(logo_path, link=link_inovally)
 
 
 st.title("App Talk to Data 💬🎲")
