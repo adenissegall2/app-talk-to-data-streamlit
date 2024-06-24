@@ -50,15 +50,16 @@ st.set_page_config(page_title="App Talk to Data", page_icon=":game_die:", layout
 logo_path = "./logo_inovally.png"
 link_inovally = "https://inovally.com.br/"
 
-logo_url = 'https://github.com/adenissegall/app-talk-to-data-streamlit/blob/main/app-talk-to-data-streamlit/logo_inovally.png'
-
+logo_url = 'imagens/logo_inovally.png'
 #st.logo("./logo_inovally.png", link=link_inovally)
 st.logo(logo_url, link=link_inovally)
 
 
 st.title("App Talk to Data 💬🎲")
 st.subheader("🦜🔗 Use o poder da IA Generativa para descobrir insights sobre os devedores!")
-st.image("./image.png")
+imagem_url = 'imagens/image.png'
+st.image(imagem_url)
+#st.image("./image.png")
 
 
 dados = Agent(df, config={"llm": llm, "enable_cache": False})
