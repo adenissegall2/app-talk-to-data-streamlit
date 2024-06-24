@@ -20,8 +20,8 @@ llm = OpenAI(api_token=openai_api_key)
 
 
 def extract_transform_data():
-    df_pessoas = pd.read_csv('df_pessoas.csv', sep=',')
-    df_devedores = pd.read_csv('df_segmentacao_devedores.csv', sep=',')
+    df_pessoas = pd.read_csv("./data/df_pessoas.csv", sep=',')
+    df_devedores = pd.read_csv("./data/df_segmentacao_devedores.csv", sep=',')
     df_final = df_devedores.merge(df_pessoas[['Idade', 'cpf', 'Gênero', 'Bairro PF',
                                            'Cidade PF', 'Bairro PF(2)', 'Cidade PF(2)']],
                                              left_on='documento', right_on='cpf', how='left')
