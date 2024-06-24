@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "app-talk-to-data-streamlit"
+version = "0.1.0"
+description = ""
+authors = ["Adenis Segal <adenissegall@gmail.com>"]
+readme = "README.md"
+packages = [{include = "app-talk-to-data-streamlit"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "1.5.3"
+streamlit = "^1.35.0"
+deep_translator = "1.11.4"
+matplotlib = "3.8.3"
+openai = "1.31.2"
+pandasai = "2.1.1"
+pymongo = "4.6.2"
+python-dotenv = "1.0.1"
+tenacity = "8.2.3"
+pyyaml = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

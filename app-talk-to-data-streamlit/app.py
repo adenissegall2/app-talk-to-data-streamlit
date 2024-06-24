@@ -13,7 +13,9 @@ matplotlib.use('Agg')
 
 
 dotenv.load_dotenv(dotenv.find_dotenv())
-openai_api_key = os.environ["OPENAI_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+
+#openai_api_key = os.environ["OPENAI_API_KEY"]
 llm = OpenAI(api_token=openai_api_key)
 
 
