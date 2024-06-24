@@ -73,7 +73,7 @@ light = '''
 </style>
 '''
 
-st.markdown(light, unsafe_allow_html=True)
+st.markdown(dark, unsafe_allow_html=True)
 
 # Create a toggle button
 toggle = st.button("Mude a cor do tema")
