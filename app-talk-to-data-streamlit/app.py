@@ -56,7 +56,7 @@ st.logo(logo_path, link=link_inovally)
 
 
 #st.title("App Talk to Data")
-st.markdown("<h1 style='text-align: center; color: red;'>App Talk to Data</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #14D2AA;'>App Talk to Data</h1>", unsafe_allow_html=True)
 
 
 st.subheader("Use o poder da IA Generativa para descobrir insights sobre os devedores do seu município! 📊📈")
