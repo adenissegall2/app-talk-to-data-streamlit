@@ -55,7 +55,9 @@ link_inovally = "https://inovally.com.br/"
 st.logo(logo_path, link=link_inovally)
 
 
-st.title("App Talk to Data 💬🎲")
+st.title("App Talk to Data")
+#st.markdown("<h1 style='text-align: center; color: red;'>App Talk to Data</h1>", unsafe_allow_html=True)
+
 
 st.subheader("Use o poder da IA Generativa para descobrir insights sobre os devedores! 📊📈")
 imagem_url = 'https://raw.githubusercontent.com/adenissegall/app-talk-to-data-streamlit/main/app-talk-to-data-streamlit/imagens/image.png'
