@@ -57,7 +57,7 @@ st.logo(logo_path, link=link_inovally)
 
 st.title("App Talk to Data 💬🎲")
 
-st.subheader("🦜🔗 Use o poder da IA Generativa para descobrir insights sobre os devedores!")
+st.subheader("💹 Use o poder da IA Generativa para descobrir insights sobre os devedores!")
 imagem_url = 'https://raw.githubusercontent.com/adenissegall/app-talk-to-data-streamlit/main/app-talk-to-data-streamlit/imagens/image.png'
 st.image(imagem_url)
 #st.image("./image.png")
